@@ -25,7 +25,7 @@ public class AllConfig {
     public static final String VxAppId = "wx34d231d36c8d7f94";
     public static final String VxAppSecret = "9fcc14ae5d15572a811f10da6231573c";
     public static final String WeatherKey = "e592a8239345e02ec7254af9a46efeff";
-    public static final String WeatherKey_HeFeng = "和风天气KEY";
+   
 
     //下列所有填写的  true 为开启， false 为不开启 ，#XXXXXX是颜色16进制HEX码（不知道颜色16进制HEX码可以百度）
     //系统开关
