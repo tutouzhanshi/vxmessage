@@ -1,0 +1,28 @@
+#此工作流将使用 Maven 构建 Java 项目，并缓存/还原任何依赖项以缩短工作流执行时间
+#有关详细信息，请参阅：https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+名称：Java CI with Maven
+
+开：
+  workflow_dispatch：
+  时间表：
+    - cron：“8 0 * * *”
+
+工作：
+  构建：
+
+    运行时间：Ubuntu-latest
+
+    步骤：
+    - 用途：动作/checkout@v3
+    - 名称：设置 JDK 11
+      用途：动作/设置java@v3
+      与：
+        Java版本：“11”
+        分布：铁木林
+        缓存：Maven
+    - 名称：用Maven构建
+      运行：mvn -B 包 --文件 pom.xml
+    - 名称：运行爪哇
+      run：java -jar ./target/VxMessageActions-1.0-SNAPSHOT.jar
+      
